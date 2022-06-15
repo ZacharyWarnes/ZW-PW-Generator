@@ -2,6 +2,8 @@
 //storing all needed charachters in variables including: upper and lower case 
 //letters, numbers, and symbols or 'special characters'.
 
+
+var length = [""]
 var upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var numbers = ["0","1","2","3","4","5","6","7","8","9"];
@@ -23,50 +25,63 @@ function generatePassword() {
   }
   console.log(passwordLength);
   
-  var numbersChoice = window.prompt ("True or False: I would like to use numbers in my password");
+  var numbersChoice = window.confirm ("Click OK to use numbers in your password");
   var numbersEl = [numbersChoice];
   console.log(numbersEl);
 
-  var upperCaseChoice = window.prompt ("True of False: I would like to use Upper Case letters in my password");
+  var upperCaseChoice = window.confirm ("Click OK to use Upper Case letters in your password");
   var upperCaseEl = [upperCaseChoice];
   console.log(upperCaseEl);
 
-  var lowerCaseChoice = window.prompt ("True of False: I would like to use Lower Case letters in my password");
+  var lowerCaseChoice = window.confirm ("Click OK to use Lower Case letters in your password ");
   var lowerCaseEl = [lowerCaseChoice];
   console.log(lowerCaseEl);
 
-  var symbolsChoice = window.prompt ("True of False: I would like to use Special Characters in my password");
+  var symbolsChoice = window.confirm ("Click OK to use symbols in your password");
   var symbolsEl = [symbolsChoice];
+  console.log(symbolsEl);
 
-  //we can use iterative processing to use the arrays above to build a password
+
+  // Write conditional to force user to provide input or alert that operation is cancelled 
+
+  //Combined character Array
+
+  var charactersCombined = []
+
+  if (passwordLength) {
+    charactersCombined =  charactersCombined.concat(length);
+  } 
+  if (numbersEl) {
+    charactersCombined = charactersCombined.concat(numbers);
+  }
+  if (upperCaseEl) {
+    charactersCombined = charactersCombined.concat(upperCaseAlpha);
+  }
+  if (lowerCaseEl) {
+    charactersCombined = charactersCombined.concat(lowerCaseAlpha);
+  }
+  if (symbolsEl) {
+    charactersCombined = charactersCombined.concat(symbols);
+  }
+
+// Password Variable
+  // var userPassword = ""
+
+
+
+  // FOr Loop to Randomize FInal user choices
+  
   // for (var i = 0; i < passwordLength; i++)
+  // userPassword + charactersCombined all that mathfloor stuff...
 
-  //Prompt the user if they want numbers and store it in a variable
-// var numbersEl = false;
 
-  // Prompt the user for if they want lower case and store it in a variable
-// var lowerCaseEl = false;
-
-  // Prompt the suer if they want upper case and store it in a variable 
-// var upperCaseEl = false;
-
-  //Prompt the user for if they want special characters and store it in a variable
-// var symbolEl = false;
-
-  //Valadate that one chacter choice is 'true'
-
-  // if() {
-  //   return ";"
-  // }
-
-  // DECLARE a new empty array to store all of the characters we want to use 
-
-  // Randomly select characters
+  
 
   //Adding that character to a building password string;
 
   // Return the completed string;
 
+  // return userPassword;
   
 
 }
@@ -85,4 +100,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);

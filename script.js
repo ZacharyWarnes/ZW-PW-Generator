@@ -7,43 +7,52 @@ var lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o
 var numbers = ["0","1","2","3","4","5","6","7","8","9"];
 var symbols = ["!","@","#","$","%","^","&","*","_","-","+","="];
 
-// What are the tasks that my code needs to compelte?
-// The core of this assingment is to declare the generate password function
+function generatePassword() {
 
-function generatePassword() {  
-
-  var lengthChoice = prompt("How many characters would you like your password to be. Chose a number between 8 and 128");
-  var passwordLength = textContent.lengthChoice;
+  var lengthChoice = window.prompt("How many characters would you like your password to be. Chose a number between 8 and 128");
+  var passwordLength = [lengthChoice];
 
   if (passwordLength < 8) {
-    prompt ("please choose a number between 8 and 128");
-    return;
-
-  if (passwordLength > 128) 
-    prompt("please choose a number between 8 and 128");
+    window.alert ("Incorrect Choice! Please choose a number between 8 and 128");
     return;
   }
+  else if (passwordLength > 128) {
+    window.alert("Incorrect Choice! Please choose a number between 8 and 128");
+    return;
 
-
+  }
+  console.log(passwordLength);
   
+  var numbersChoice = window.prompt ("True or False: I would like to use numbers in my password");
+  var numbersEl = [numbersChoice];
+  console.log(numbersEl);
+
+  var upperCaseChoice = window.prompt ("True of False: I would like to use Upper Case letters in my password");
+  var upperCaseEl = [upperCaseChoice];
+  console.log(upperCaseEl);
+
+  var lowerCaseChoice = window.prompt ("True of False: I would like to use Lower Case letters in my password");
+  var lowerCaseEl = [lowerCaseChoice];
+  console.log(lowerCaseEl);
+
+  var symbolsChoice = window.prompt ("True of False: I would like to use Special Characters in my password");
+  var symbolsEl = [symbolsChoice];
 
   //we can use iterative processing to use the arrays above to build a password
   // for (var i = 0; i < passwordLength; i++)
-  
-  // 'Prompt' the user for their 'passwordLength' and store it in a variable
-
-  //Validate the password length and make sure it's a number between or equal to 8 and 128.
-
-  // IF 'passwordLength' is greater than or equal to 8 and 'passwordLength' is less than or equal to 128
 
   //Prompt the user if they want numbers and store it in a variable
 // var numbersEl = false;
+
   // Prompt the user for if they want lower case and store it in a variable
 // var lowerCaseEl = false;
+
   // Prompt the suer if they want upper case and store it in a variable 
 // var upperCaseEl = false;
+
   //Prompt the user for if they want special characters and store it in a variable
 // var symbolEl = false;
+
   //Valadate that one chacter choice is 'true'
 
   // if() {

@@ -1,7 +1,3 @@
-//What sort of data does my app need to work? starting variables?
-//storing all needed charachters in variables including: upper and lower case 
-//letters, numbers, and symbols or 'special characters'.
-
 
 var upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -16,6 +12,7 @@ function generatePassword() {
     window.alert ("Incorrect Choice! Please choose a number between 8 and 128");
     return;
   }
+
   else if (passwordLength > 128) {
     window.alert("Incorrect Choice! Please choose a number between 8 and 128");
     return;
@@ -68,8 +65,6 @@ for (var i = userPassword.length; i < passwordLength; i++){
 }
   
 
-
-  //Adding that character to a building password string;
 
   // Return the completed string;
 

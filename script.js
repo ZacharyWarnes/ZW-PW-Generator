@@ -35,6 +35,12 @@ function generatePassword() {
 
   // Write conditional to force user to provide input or alert that operation is cancelled 
 
+  if ((numbersEl == false && upperCaseEl == false && lowerCaseEl == false && symbolsEl == false)) {
+    alert("Please choose at least one option");
+
+    return;
+  }
+
   //Combined character Array
 
   var charactersCombined = []

@@ -32,4 +32,4 @@
 
 ![Homework Mock-up](/assets/03-javascript-homework-demo.png)
 
-Current page can be found at: 
+Current page can be found at: https://zacharywarnes.github.io/ZW-PW-Generator/
